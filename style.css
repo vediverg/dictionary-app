@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Merriweather:wght@300&family=Open+Sans:wght@300;400&family=Oswald&family=Plus+Jakarta+Sans:wght@500&family=Roboto:wght@300&family=Shrikhand&family=Space+Grotesk:wght@500&family=Space+Mono&display=swap");
+
+#bar {
+  width: 737px;
+  height: 36.5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #a445ed;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #a445ed;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#search-svg {
+  position: absolute;
+  top: 15%;
+  left: 73%;
+}
+#word-section {
+  display: flex;
+  justify-content: space-between;
+  width: 737px;
+  margin-top: 40px;
+}
+#description {
+  width: 737px;
+  margin-top: 40px;
+}
+.hline {
+  height: 1px;
+  background: #979797;
+  margin-bottom: 40px;
+}
+
+#meaning {
+  width: 737px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+#search[type="text"].lightInput {
+  color: #2d2d2d;
+  font-weight: bold;
+  font-size: large;
+  padding-left: 20px;
+  outline: none;
+}
+
+#search[type="text"].darkInput {
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  padding-left: 20px;
+  outline: none;
+}
+
+.list {
+  margin-bottom: 15px;
+  list-style: none;
+  font-size: 18px;
+}
+
+.list::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #a445ed; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+.lightlist {
+  color: #2d2d2d;
+}
+.darklist {
+  color: white;
+}
+
+.lightSearch {
+  height: 60px;
+  width: 736px;
+  border-radius: 9px;
+  margin-top: 40px;
+  background: #f4f4f4;
+  position: relative;
+  outline: none;
+}
+
+.darkSearch {
+  height: 60px;
+  width: 736px;
+  border-radius: 9px;
+  margin-top: 40px;
+  outline: none;
+  background: #1f1f1f;
+  position: relative;
+}
+
+.darkbody {
+  background: #050505;
+  color: white;
+}
+
+.lightbody {
+  background: white;
+  color: black;
+}
+
+.lightWord {
+  color: #2d2d2d;
+  font-size: 64px;
+  font-weight: bold;
+}
+.darkWord {
+  color: white;
+  font-size: 64px;
+  font-weight: bold;
+}
+.parts {
+  font-size: 25px;
+  font-weight: 700;
+  font-style: oblique;
+}
+.lightselect {
+  background: none;
+  border: none;
+  font-weight: bolder;
+  color: #2d2d2d;
+  font-size: 14px;
+  text-transform: capitalize;
+  outline: none;
+}
+.darkselect {
+  background: none;
+  border: none;
+  font-weight: bolder;
+  color: white;
+  font-size: 14px;
+  text-transform: capitalize;
+  outline: none;
+}
+#circle:hover {
+  fill: #8600ec;
+}
+#not-found {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.lightNo {
+  text-transform: capitalize;
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.darkNo {
+  text-transform: capitalize;
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 770px) {
+  #bar {
+    width: 605px;
+    height: 36.5px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #found {
+    width: 605px;
+  }
+  #not-found {
+    width: 605px;
+  }
+  #nav {
+    width: 605px;
+  }
+  .lightSearch {
+    width: 605px;
+  }
+  .darkSearch {
+    width: 605px;
+  }
+  #word-section {
+    width: 605px;
+  }
+  #description {
+    width: 605px;
+  }
+  @media screen and (max-width: 642px) {
+    #bar {
+      width: 400px;
+      height: 25px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #found {
+      width: 400px;
+    }
+    #not-found {
+      width: 400px;
+    }
+    #nav {
+      width: 400px;
+    }
+    .lightSearch {
+      width: 400px;
+    }
+    .darkSearch {
+      width: 400px;
+    }
+    #word-section {
+      width: 400px;
+    }
+    #description {
+      width: 400px;
+    }
+  }
+}
+@media screen and (max-width: 442px) {
+  #bar {
+    width: 327px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #found {
+    width: 327px;
+  }
+  #not-found {
+    width: 327px;
+  }
+  #nav {
+    width: 327px;
+  }
+  .lightSearch {
+    width: 327px;
+  }
+  .darkSearch {
+    width: 327px;
+  }
+  #word-section {
+    width: 327px;
+  }
+  #description {
+    width: 327px;
+  }
+}

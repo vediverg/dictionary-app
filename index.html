@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Dictionary web app</title>
+  </head>
+  <body
+    class="lightbody"
+    style="display: flex; justify-content: center; flex-direction: row"
+  >
+    <div style="display: block">
+      <div class="nav">
+        <div id="bar">
+          <img src="assets/images/logo.svg" id="logo" />
+          <div style="display: flex; align-items: center">
+            <select id="select" class="lightselect">
+              <option id="sans" value="Open Sans">Open Sans</option>
+              <option id="serif" value="Times New Roman">
+                Times New Roman
+              </option>
+              <option id="mono" value="Space Mono">Mono Space</option>
+            </select>
+            <label class="switch" style="margin-left: 20px">
+              <input type="checkbox" />
+              <span class="slider round" id="toggle-button"></span>
+            </label>
+            <img src="assets/images/icon-moon.svg" style="margin-left: 20px" />
+          </div>
+        </div>
+        <div>
+          <input
+            type="text"
+            id="search"
+            class="lightSearch lightInput"
+            placeholder="Search for any word..."
+            style="border-color: none; border: none"
+          />
+          <div id="error"></div>
+          <!--<img src="assets/images/icon-search.svg" id="search-svg" />-->
+        </div>
+        <div id="found">
+          <div id="word-section">
+            <div>
+              <div id="word" class="lightWord">word</div>
+              <div style="color: #a445ed; font-size: 24px" id="phonetic">
+                wɜːd
+              </div>
+            </div>
+            <svg
+              id="audio"
+              xmlns="http://www.w3.org/2000/svg"
+              width="75"
+              height="75"
+              viewBox="0 0 75 75"
+            >
+              <g fill="#a445ed" fill-rule="evenodd" id="circle">
+                <circle cx="37.5" cy="37.5" r="37.5" opacity=".25" />
+                <path d="M29 27v21l21-10.5z" />
+              </g>
+            </svg>
+          </div>
+          <div id="description"></div>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
+    </div>
+    <div id="not-found" style="display: none">
+      <img src="assets/images/icons8-hamster-96.png" />
+      <p class="lightNo" id="noDefFound">No Definitions Found</p>
+      <p style="font-weight: lighter; color: #757575; font-size: 20px">
+        Sorry pal, we couldn't find definitions for the word you were looking
+        for.<br />
+        You can try the search again at later time or head to the web instead.
+      </p>
+    </div>
+  </body>
+</html>
